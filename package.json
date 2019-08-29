@@ -1,0 +1,16 @@
+{
+  "name": "tre-cli-client",
+  "version": "1.0.0",
+  "description": "convenience ssb client for tre cli tools",
+  "main": "index.js",
+  "keywords": [
+    "tre",
+    "ssb"
+  ],
+  "author": "Jan Bölsche <jan@lagomorph.de> (https://regular.codes/)",
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "rc": "^1.2.8",
+    "scuttlebot-release": "ssbc/scuttlebot-release#11.3.x-fixups"
+  }
+}
