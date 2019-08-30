@@ -10,6 +10,7 @@
   "author": "Jan Bölsche <jan@lagomorph.de> (https://regular.codes/)",
   "license": "AGPL-3.0-or-later",
   "dependencies": {
+    "dont-stop-believing": "^1.0.0",
     "rc": "^1.2.8",
     "scuttlebot-release": "ssbc/scuttlebot-release#11.3.x-fixups"
   }

@@ -1,7 +1,10 @@
 const {join, resolve} = require('path')
 const ssbKeys = require('scuttlebot-release/node_modules/ssb-keys')
 const ssbClient = require('scuttlebot-release/node_modules/ssb-client')
+const retry = require('dont-stop-believing')
 const conf = require('rc')('tre')
+
+const retryClient = retry(ssbClient)
 
 module.exports = function(cb) {
   const configPath = conf.config
@@ -12,7 +15,7 @@ module.exports = function(cb) {
   ssbKeys.load(join(ssbPath, 'secret'), (err, keys) => {
     if (err) return cb(err)
 
-    ssbClient(keys, Object.assign({},
+    retryClient(keys, Object.assign({},
       conf, { manifest: {manifest: 'async'} }
     ), (err, ssb) => {
       if (err) return cb(err)
