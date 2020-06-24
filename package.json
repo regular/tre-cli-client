@@ -12,6 +12,7 @@
   "dependencies": {
     "dont-stop-believing": "^1.0.0",
     "rc": "^1.2.8",
-    "scuttlebot-release": "ssbc/scuttlebot-release#11.3.x-fixups"
+    "ssb-client": "^4.9.0",
+    "ssb-keys": "^7.2.2"
   }
 }
